@@ -1,8 +1,8 @@
-const Genre = ({ title, smiley }) => {
+const Genre = ({ genre }) => {
   return (
     <div className="genre">
-      <p>😁</p>
-      <p>{title}</p>
+      <p>{genre.emoji}</p>
+      <p>{genre.title}</p>
     </div>
   );
 };

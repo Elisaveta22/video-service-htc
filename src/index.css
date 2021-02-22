@@ -1,5 +1,6 @@
 :root {
   --htc-color: #1f4766;
+  --red: #e5261e;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
@@ -14,6 +15,8 @@
 }
 
 .header {
+  margin-top: 20px;
+  width: 80vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -38,7 +41,7 @@
   border: none;
   font-size: 16px;
   font-weight: 500;
-  color: #e5261e;
+  color: var(--red);
   background-color: #ffffff;
 }
 
@@ -50,20 +53,24 @@
   font-size: 16px;
   font-weight: 500;
   color: #ffffff;
-  background-color: #e5261e;
+  background-color: var(--red);
 }
 
 .main {
   margin-bottom: 50px;
+  width: 80vw;
 }
 
 .main-headers {
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.main-headers h1 {
+.main-headers button {
+  background-color: #ffffff;
+  border: none;
   font-size: 28px;
   margin-right: 15px;
 }
@@ -107,6 +114,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .genre {
@@ -123,6 +131,45 @@
   display: flex;
   flex-direction: column;
   offset: 0px 0px;
+}
+
+.channels {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.channel-item {
+  display: flex;
+  flex-direction: row;
+  background-color: #f2f2f2;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.channel-item img {
+  height: 100px;
+}
+
+.channel-title {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.program {
+  display: flex;
+  flex-direction: row;
+}
+
+.program .program-hour {
+  margin-right: 20px;
+}
+
+.footer {
+  width: 100%;
+  background-color: #f2f2f2;
 }
 
 .footer p {
