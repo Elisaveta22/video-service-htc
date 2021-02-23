@@ -3,7 +3,9 @@ import Program from "./Program";
 const ChannelItem = ({ channel }) => {
   return (
     <div className="channel-item">
-      <img src={channel.img} alt="" />
+      <div className="channel-logo">
+        <img src={channel.img} alt="" />
+      </div>
       <div>
         <h3 className="channel-title">{channel.title}</h3>
         <div className="programs">

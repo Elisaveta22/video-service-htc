@@ -50,7 +50,7 @@ const ChannelsPage = () => {
     {
       id: 3,
       title: "РБК",
-      img: "../images/2x2.png",
+      img: "../images/rbc.png",
       schedule: [
         {
           id: 1,

@@ -19,7 +19,8 @@ const MoviesPage = () => {
     {
       id: 3,
       name: "Однажды... в Голливуде",
-      description: "",
+      description:
+        "Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.",
       img: "../images/hollywood.png",
     },
     {
@@ -63,9 +64,9 @@ const MoviesPage = () => {
 
   return (
     <>
-      <h1>Новинки</h1>
+      <h1 className="page-header">Новинки</h1>
       <Movies movies={movies} />
-      <h1>Жанры</h1>
+      <h1 className="page-header">Жанры</h1>
       <Genres genres={genres} />
     </>
   );
