@@ -344,7 +344,6 @@ body {
 .channels {
   overflow-y: auto;
 
-  height: calc(100vh - 50vh);
   overflow-y: auto; /**/
   margin-top: 50px;
   width: inherit;
