@@ -3,7 +3,9 @@ const MovieItem = ({ movie }) => {
     <div className="movie-item">
       <div className="image-wrapper">
         <img src={movie.img} alt="" />
-        <p class="movie-item-description">{movie.desrciption}</p>
+        <div className="img-overlay">
+          <p class="movie-item-description">{movie.description}</p>
+        </div>
       </div>
       <p class="movie-item-name">{movie.name}</p>
     </div>

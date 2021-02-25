@@ -4,6 +4,25 @@ import { useState } from "react";
 const Header = () => {
   const [signInModalActive, setSignInModalActive] = useState(false);
 
+  const [users, setUsers] = useState([
+    {
+      id: 1,
+      login: "test",
+      name: "Константин К.",
+      password: "12345",
+    },
+  ]);
+
+  const [error, setError] = useState("");
+
+  const signin = (details) => {
+    console.log(details);
+  };
+
+  const logout = () => {
+    console.log("Logout");
+  };
+
   return (
     <div className="header">
       <div className="logo">
@@ -17,6 +36,7 @@ const Header = () => {
           Найти
         </button>
       </form>
+
       <button
         className="sign-in-btn"
         onClick={() => setSignInModalActive(true)}
@@ -27,6 +47,8 @@ const Header = () => {
       <SignInModalWindow
         active={signInModalActive}
         setActive={setSignInModalActive}
+        signin={signin}
+        error={error}
       />
     </div>
   );

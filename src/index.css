@@ -5,6 +5,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
 
+*:focus {
+  outline: none;
+}
+
 body {
   height: 100vh;
 }
@@ -54,9 +58,40 @@ body {
   height: 25px;
   font-size: 16px;
   font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #828282;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #828282;
+  opacity: 1;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #828282;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #828282;
+}
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #828282;
+}
+
+::placeholder {
+  /* Most modern browsers support this now. */
+  color: #828282;
 }
 
 .find-btn {
+  margin-left: 20px;
   border: none;
   font-size: 16px;
   font-weight: 500;
@@ -74,6 +109,10 @@ body {
   font-weight: 500;
   color: #ffffff;
   background-color: var(--red);
+}
+
+.sign-in-btn:hover {
+  background-color: #cc221b;
 }
 
 .sign-in-container {
@@ -107,6 +146,7 @@ body {
 }
 
 .sign-in-card form {
+  margin-top: 20px;
   width: inherit;
   display: flex;
   flex-direction: column;
@@ -114,17 +154,23 @@ body {
 }
 
 .sign-in-card form .input-field {
+  width: 90%;
   margin-top: 20px;
 }
 
 .sign-in-checkbox {
+  margin-top: 20px;
   align-self: flex-start;
   display: flex;
   flex-direction: row;
-  align-content: flex-end;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .sign-in-checkbox input {
+  margin-left: 15px;
+  margin-right: 15px;
   height: 16px;
   width: 16px;
   border-radius: 4px;
@@ -136,21 +182,18 @@ body {
 }
 
 .sign-in-card h1 {
+  margin: 0;
+  margin-top: 20px;
   font-family: "Rubik", sans-serif;
   font-weight: 500;
   font-size: 28px;
 }
 
-.sign-in-card input {
-  width: 90%;
-}
-
 .sign-in-card button {
-  margin-top: 90px;
+  margin-top: 100px;
 }
 
 .main {
-  overflow-y: auto;
   margin-top: 50px;
   margin-bottom: 50px;
   width: 80vw;
@@ -197,6 +240,7 @@ body {
 }
 
 .image-wrapper {
+  position: relative;
   width: 280px;
   height: 370px;
   border: 2px solid #ffff;
@@ -204,27 +248,33 @@ body {
 }
 
 .movie-item img {
+  display: block;
   border-radius: 8px;
   object-fit: cover;
   height: 100%;
   width: 100%;
 }
 
-.movie-item-description {
-  border-radius: 8px;
+.img-overlay {
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  border-radius: 8px;
+  position: absolute;
   background: rgb(51, 51, 51, 0.8);
-  color: #fff;
-  width: 280px;
-  height: 370px;
+  width: 100%;
+  height: 100%;
   visibility: hidden;
   opacity: 0;
 }
 
-.image-wrapper:hover .movie-item-description {
+.movie-item-description {
+  padding: 15px;
+  color: #fff;
+}
+
+.image-wrapper:hover .img-overlay {
   visibility: visible;
   opacity: 1;
 }
@@ -259,8 +309,8 @@ body {
   box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
 }
 
-.genre :hover {
-  offset: 0px, 0px rgba(0, 0, 0, 0.15);
+.genre:hover {
+  opacity: 1;
 }
 
 .channels {

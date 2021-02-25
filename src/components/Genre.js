@@ -3,7 +3,7 @@ const Genre = ({ genre }) => {
     <div
       className="genre"
       style={{
-        background: `linear-gradient(to right, ${genre.colorFrom}, ${genre.colorTo})`,
+        background: `linear-gradient(127.83deg, ${genre.colorFrom}, ${genre.colorTo})`,
       }}
     >
       <p>{genre.emoji}</p>

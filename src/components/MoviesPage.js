@@ -64,7 +64,7 @@ const MoviesPage = () => {
 
   return (
     <>
-      <h1 className="page-header">Новинки</h1>
+      <h1 className="page-header">🔥 Новинки</h1>
       <Movies movies={movies} />
       <h1 className="page-header">Жанры</h1>
       <Genres genres={genres} />
