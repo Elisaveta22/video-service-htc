@@ -1,11 +1,15 @@
 import react, { useState } from "react";
 
 const SignIn = ({ signin, error }) => {
-  const [login, setLogin] = useState("");
+  /*const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const [keep, setKeep] = useState(false);
-
-  const [details, setDetails] = useState({ login: "", password: "" });
+*/
+  const [details, setDetails] = useState({
+    login: "",
+    password: "",
+    keep: false,
+  });
 
   const submitHandler = (e) => {
     e.preventDefault();
